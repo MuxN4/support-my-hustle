@@ -1,103 +1,96 @@
-import Image from "next/image";
+'use client';
+import BubblyButton from '@/components/BubblyButton';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <section className="min-h-screen flex flex-col bg-white relative overflow-hidden">
+      {/* Main Content Area */}
+      <div className="flex flex-col md:flex-row pt-4 px-4 md:px-20 gap-10">
+        {/* Left Side - Text Content */}
+        <div className="md:w-1/2 flex flex-col pt-8 md:pt-16 px-4 md:px-8 text-center md:text-left">
+          {/* Decorative Element */}
+          <div className="mx-auto md:mx-0 w-[60px] h-2 bg-[#FF6B35] rounded-md mb-6"></div>
+          
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#222222] mb-6 leading-tight">
+            Turn Your Passion<br />Into Profit
+          </h1>
+          
+          <p className="text-lg font-nunito text-[#555555] mb-8 max-w-md mx-auto md:mx-0">
+            Get the financial support you need to pursue your creative
+            endeavors, freelance work, or entrepreneurial projects.
+          </p>
+          
+          {/* CTA Button */}
+          <div className="mb-8 z-10 flex justify-center md:justify-start">
+            <BubblyButton className="relative bg-[#FF6B35] hover:bg-orange-600 text-white font-bold py-5 px-10 rounded-full text-xl transition-colors duration-300 cursor-pointer">
+              Start Your Hustle
+            </BubblyButton>
+          </div>
+          
+          <p className="text-sm text-[#777777] text-center md:text-left">Trusted by 10,000+ creators worldwide</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        
+        {/* Right Side - Visual Element */}
+        <div className="hidden md:block md:w-1/2 relative h-[460px]">
+          {/* Background Shape - Parallelogram */}
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-10 left-0 right-0 bottom-0 bg-[#F9F9FB] transform skew-x-6"></div>
+          </div>
+          
+          {/* Creator Illustrations - Abstract Circle */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] rounded-full bg-[#F0F6FF] bg-opacity-70"></div>
+          
+          {/* Geometric Pattern Elements */}
+          <div className="absolute top-[100px] right-[70px] w-20 h-20 rounded-md bg-[#ff9670] bg-opacity-10"></div>
+          <div className="absolute top-[130px] right-[40px] w-20 h-20 rounded-md bg-[#ff9670] bg-opacity-20"></div>
+          
+          {/* Creator Success Visual - Card */}
+          <div className="absolute top-[150px] left-[140px] w-[200px] h-[140px] rounded-lg bg-white border border-[#eeeeee] shadow-sm">
+            <div className="absolute top-5 left-5 w-[160px] h-[10px] rounded-md bg-[#eeeeee]"></div>
+            <div className="absolute top-10 left-5 mt-4 w-[120px] h-[10px] rounded-md bg-[#eeeeee]"></div>
+            <div className="absolute top-[70px] left-5 w-20 h-[50px] rounded-md bg-[#ff9670] bg-opacity-20"></div>
+          </div>
+          
+          {/* Growth Indicator */}
+          <div className="absolute top-[300px] left-[160px]">
+            <svg width="130" height="70" viewBox="0 0 120 70" fill="none">
+              <path d="M0 50 L20 30 L40 40 L60 20 L80 10 L100 0" stroke="#FF6B35" strokeWidth="2" />
+              <circle cx="100" cy="0" r="5" fill="#FF6B35" />
+            </svg>
+          </div>
+          
+          {/* Floating Elements */}
+          <div className="absolute top-[120px] left-[120px] w-[50px] h-[50px] rounded-full bg-[#ff9670] bg-opacity-10"></div>
+          <div className="absolute bottom-[80px] right-[40px] w-[70px] h-[70px] rounded-full bg-[#ff9670] bg-opacity-10"></div>
+          <div className="absolute bottom-[150px] left-[100px] w-10 h-10 rounded-md bg-[#ff9670] bg-opacity-10"></div>
+        </div>
+      </div>
+      
+      {/* Feature Icons */}
+      <div className="w-full bg-[#F9F9FB] py-6 md:py-10 mt-1.5">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 px-4">
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#222222] flex items-center justify-center mb-2">
+              <span className="text-base md:text-lg font-medium text-[#222222]">1:1</span>
+            </div>
+            <span className="text-sm md:text-xs text-[#555555]">Direct Support</span>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#222222] flex items-center justify-center mb-2">
+              <span className="text-base md:text-lg font-medium text-[#222222]">0%</span>
+            </div>
+            <span className="text-sm md:text-xs text-[#555555]">No Platform Fee</span>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#222222] flex items-center justify-center mb-2">
+              <span className="text-base md:text-lg font-medium text-[#222222]">24h</span>
+            </div>
+            <span className="text-sm md:text-xs text-[#555555]">Fast Payments</span>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
